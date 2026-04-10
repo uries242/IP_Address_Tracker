@@ -24,22 +24,40 @@ header {
 header form {
   width: 50%;
   margin: 0 auto;
+  display: flex;
+  border-radius: 0 25px 25px 0;
 }
 
+input[type="text"] {
+  width: 100%;
+  padding: 16px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  box-sizing: border-box;
+}
 
+.submitBtn {
+  border-radius: 0 25px 25px 0;
+  background-color: #333;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.submitBtn img {
+  width: 12px;
+}
 
 .info_container {
   background: rgb(255, 255, 255);
   display: flex;
   position: absolute;
   justify-content: space-evenly;
-  /* top: 0; */
-  /* padding: 10px; */
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1000;
   flex-direction: row;
-
   gap: 3rem;
   border-radius: 13px;
   box-shadow: 0 4px 12px rgb(0, 0, 0, 1);
@@ -49,20 +67,6 @@ header form {
 .info_container h6 {
   color: hsl(0, 0%, 58%);
   font-weight: 400;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  font-size: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-.buttonBtn {
-  color: black;
 }
 
 .map_section {
