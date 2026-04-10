@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  align-items: center;
+}
+
+header {
+  background-image: url(./images/pattern-bg-desktop.png);
+  background-size: cover;
+  align-self: stretch;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  min-height: 280px;
+  position: relative;
+  z-index: 1000;
+}
+
+header form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+
+.info_container {
+  background: rgb(255, 255, 255);
+  display: flex;
+  position: absolute;
+  justify-content: space-evenly;
+  /* top: 0; */
+  /* padding: 10px; */
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+  flex-direction: row;
+
+  gap: 3rem;
+  border-radius: 13px;
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 1);
+  width: 60%;
+}
+
+.info_container h6 {
+  color: hsl(0, 0%, 58%);
+  font-weight: 400;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.buttonBtn {
+  color: black;
+}
+
+.map_section {
+  position: relative;
+  width: 100%;
+}
+
+#map {
+  height: calc(100vh - 280px);
+  width: 100%;
+  overflow: visible;
+}

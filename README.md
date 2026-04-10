@@ -120,3 +120,9 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+
+
+
+## challenges:
+having  the info container overlap the map and header. initially thought this could be done with the z-index but it doesnt cause the overlap i still needed positioning to make them physically overlap first. 
