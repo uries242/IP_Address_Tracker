@@ -1,7 +1,6 @@
-// fetch logic
+// Geolocation fetch logic
 
-
-var apiKey = "at_jSpNDc9OnlncMeCSGQN9AWEmulrNX";
+var apiKey = "at_jSpNDc9OnlncMeCSGQN9AWEmulrNX"; // TODO: Place in .env
 
 async function getIpData(ipAddress) {
   try {
