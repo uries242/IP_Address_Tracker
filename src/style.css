@@ -57,33 +57,43 @@ input[type="text"] {
   background: rgb(255, 255, 255);
   display: flex;
   position: absolute;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  text-align: left;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1000;
+  margin: 0;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1.5rem;
   border-radius: 13px;
   box-shadow: 0 4px 12px rgb(0, 0, 0, 1);
-  width: 60%;
-  padding: 24px 32px;
+  width: fit-content;
+  padding: 24px 32px 24px 16px;
 }
 
 .info_container h6 {
   color: hsl(0, 0%, 58%);
+  margin: 0;
   font-weight: 400;
-  align-items: center;
+  font-size: 0.75rem;
 }
 
 .info_container div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   border-right: 1px solid hsl(0, 0%, 80%);
   padding-right: 2rem;
-  align-items: center;
+  gap: 8px;
+}
+
+.info_container p {
+  margin: 0;
+  padding: 0;
 }
 
 .info_container div:last-child {
   border-right: none;
-  height: 50px;
 }
 
 .map_section {
