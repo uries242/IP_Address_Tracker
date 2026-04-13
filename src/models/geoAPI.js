@@ -13,7 +13,3 @@ async function getIpData(ipAddress) {
   }
 }
 
-
-//  CALL FUNCTION
-// getIpData("209.85.231.104") 
-// .then(data => console.log(data));
