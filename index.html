@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="src/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -24,29 +29,28 @@
 </head>
 
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 0.6875rem;
-      text-align: center;
-    }
+<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<style>
+  .attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+  }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+</style>
 
 
 <body>
 
   <header>
-
     <h5 class="title">IP Address Tracker</h5>
 
     <form class="input_form">
       <input type="text" id="inputTextField" placeholder="Search for any IP address or domain" />
-      <button class="submitBtn" type="submit" >
-        <img src="./src/images/icon-arrow.svg" alt="">
+      <button class="submitBtn" type="submit">
+        <img src="./src/images/icon-arrow.svg" alt="Search">
       </button>
     </form>
 
@@ -58,43 +62,35 @@
 
       <div>
         <h6>IP ADDRESS</h6>
-        <p id="ip_address"></p>
+        <p id="ip_address" aria-live="polite"></p>
       </div>
 
       <div>
         <h6>LOCATION</h6>
-        <p id="location"></p>
+        <p id="location" aria-live="polite"></p>
       </div>
 
       <div>
         <h6>TIMEZONE</h6>
-        <p id="timezone"></p> <!-- display UTC offset dynamically -->
+        <p id="timezone" aria-live="polite"></p>
       </div>
 
       <div>
         <h6>ISP</h6>
-        <p id="isp"></p>
+        <p id="isp" aria-live="polite"></p>
       </div>
 
     </div>
 
-
     <div id="map"></div>
 
   </div>
-
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Lateyko Adderley</a>.
+  </footer>
 </body>
 
+
 </html>
-
-
-
-
-
-
-
-
-<!-- <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </footer> -->

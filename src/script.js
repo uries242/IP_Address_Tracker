@@ -24,7 +24,3 @@ function updateData(data) {
   return;
 }
 
-// getIpData("209.85.231.104")
-// .then(function(data){
-//     updateData(data);
-// })

@@ -1,10 +1,8 @@
-# Frontend Mentor - IP address tracker solution
-
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+# Frontend Mentor Challenge: IP Address Tracker solution
+This is my solution to the IP address tracker challenge on Frontend Mentor(https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
-
-- [Overview](#overview)
+-[Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -17,108 +15,91 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+The goal of this challenge was to build a fully functional IP Address Tracker app and get it looking as close to the target image as possible. Functionality of the app would be achieved by using the IP Geolocation API by IPify to get the IP Address locations and LeafletJS to generate the map. 
 
 ### The challenge
-
-Users should be able to:
-
+Users should be able to
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements on the page
 - See their own IP address on the map on the initial page load
 - Search for any IP addresses or domains and see the key information and location
 
 ### Screenshot
+![alt text](image-1.png)
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Github Repo: https://github.com/uries242/IP_Address_Tracker.git
+- Live Site URL: https://uries242.github.io/IP_Address_Tracker/
+- Leaflet: https://leafletjs.com/reference.html
+- Geolocation: https://geo.ipify.org/docs
+- W3 Schools: www.w3schools.com
+- MDN: https://developer.mozilla.org/en-US/
 
 ## My process
+I started this project by downloading the provided starter files and immediately went to work on building the header. Next I worked on rendering the map along with basic functionality i.e marker icon. My next task, which was also the most time consuming, was placing the info-container over the header and map. I then proceeded to add the IP location functionality to the map using the Ipify API. Once this was achieved the remainder of the time was spent on polishing the app's UI. 
+
 
 ### Built with
-
 - Semantic HTML5 markup
 - CSS custom properties
+- Javascript functions
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Leaflet Api
+- API
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
+Working on this project helped reinforced my understanding of CSS positioning, specifically using position: absolute with transform: translateX & translateY to center and overlap elements across section boundaries. I also learned how to integrate third-party APIs and navigate API documentation. Finally, this project reinfored by learning of Asynchronous operations using async/await, JS Promises, DOM manipulation and responsive design. 
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Key CSS & JS pattern I'm proud of:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+```CSS
+header {
+  background-image: url(./images/pattern-bg-desktop.png);
+  background-size: cover;
+  align-self: stretch;
+  padding-top: 20px;
+  margin: 0;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+  min-height: 220px;
+  position: relative;
+  z-index: 1000;
 }
 ```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function updateData(data) {
+  ip_address.textContent = data.ip;
+  ipLocation.textContent = data.location.city + ", " + data.location.region;
+  timezone.textContent = "UTC " + data.location.timezone;
+  isp.textContent = data.isp;
+  marker.setLatLng([data.location.lat, data.location.lng]);
+  map.setView([data.location.lat, data.location.lng], 13);
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+This project will form the basis of two future personal projects I will be starting at the completion of the PerScholas SWE MERN Bootcamp. 
 
 ### Useful resources
+- [Leaflet.js Docs](https://leafletjs.com/reference.html) - Used for map initialization, marker placement, and `setView`/`setLatLng` methods.
+- [IPify Geolocation API](https://geo.ipify.org/docs) - Used to fetch IP address, location, timezone, and ISP data.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - Referenced for CSS positioning, flexbox, and fetch/async patterns.
+- [W3Schools](https://www.w3schools.com) - Quick reference for HTML and CSS syntax.
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+AI tool ChatGPT was used as a resource to explain technical jargon and provide additional examples beyond what was given in the W3 and MDN documentation. 
 
 ## Author
+- GitHub - [@uries242](https://github.com/uries242)
+- Frontend Mentor - [@uries242](https://www.frontendmentor.io/profile/uries242)
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+## Special Thanks & Acknowledgments
+Thanks to the PerScholas instructor Paul Chapman for templates and Code-Along guidance, Ta'ron Bentley for sharing additional resources of key map features.
