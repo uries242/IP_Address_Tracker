@@ -19,6 +19,8 @@ function updateData(data) {
   ipLocation.textContent = data.location.city + ", " + data.location.region;
   timezone.textContent = "UTC " + data.location.timezone;
   isp.textContent = data.isp;
+  marker.setLatLng([data.location.lat, data.location.lng])
+  map.setView([data.location.lat, data.location.lng])
   return;
 }
 
