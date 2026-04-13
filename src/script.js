@@ -7,8 +7,12 @@ let isp = document.getElementById("isp");
 const submitBtn = document.getElementById("submitBtn");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); 
-  var ip = userInput.value;
+  event.preventDefault();
+  var ip = userInput.value.trim();
+  if (!ip) {
+    alert("Please enter an IP address.");
+    return;
+  }
   getIpData(ip).then(function (data) {
     updateData(data);
   });

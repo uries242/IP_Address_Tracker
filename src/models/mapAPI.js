@@ -1,7 +1,6 @@
 // Leaflet API
 
 var map = L.map('map').setView([51.505, -0.09], 13);
-// var map = L.map('map').setView([0, 0], 1);
 
 var marker = L.marker([51.5, -0.09]).addTo(map)
 
